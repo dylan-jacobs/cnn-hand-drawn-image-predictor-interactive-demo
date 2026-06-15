@@ -82,6 +82,11 @@ p{
   justify-content:space-between;
 }
 
+#disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .eval-text {
   color:rgb(172, 172, 172);
   align-self: center;

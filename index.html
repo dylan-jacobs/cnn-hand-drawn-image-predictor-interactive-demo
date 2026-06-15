@@ -40,9 +40,13 @@
                     <button class="tool-btn" onclick="clearCanvas()">
                     <i class="ti ti-trash"></i> Clear
                     </button>
-                    <button class="tool-btn" onclick="predict()">
+                    <button class="tool-btn" disabled onclick="predict()">
                     <i class="ti ti-download"></i> Predict
                     </button>
+                    <div id="loader">
+                        <div class="spinner-circle"></div>
+                        <p>Loading model...</p>
+                    </div>
                 </div>
 
                 <div id="controls">
