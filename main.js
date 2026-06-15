@@ -7,7 +7,7 @@ async function loadModel() {
         session = await ort.InferenceSession.create("./cnn_model_inline.onnx");
         console.log("Model loaded");
         isModelLoaded = true;
-        document.getElementById('loader').style.display = 'none';
+        document.getElementById('loader').style.display = "none";
         document.querySelector('button[onclick="predict()"]').disabled = false;
     } catch (error) {
         console.error("Error loading model:", error);
@@ -272,6 +272,9 @@ function displayTensor(tensor, width, height, canvasId) {
 async function predict() {
     if (!isModelLoaded) {
         return;
+    }
+    else{
+        document.getElementById('loader').style.display = "none";
     }
     const inputTensor = getCanvas();
     displayTensor(inputTensor, inputImageSize, inputImageSize, 'previewCanvas');

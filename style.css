@@ -82,7 +82,7 @@ p{
   justify-content:space-between;
 }
 
-#disabled {
+#tool-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
