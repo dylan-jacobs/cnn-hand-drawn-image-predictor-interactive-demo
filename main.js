@@ -8,6 +8,7 @@ async function loadModel() {
         console.log("Model loaded");
         isModelLoaded = true;
         document.getElementById('loader').style.display = "none";
+        document.getElementById('loader-inner').style.display = "none";
         document.querySelector('button[onclick="predict()"]').disabled = false;
     } catch (error) {
         console.error("Error loading model:", error);
@@ -275,6 +276,7 @@ async function predict() {
     }
     else{
         document.getElementById('loader').style.display = "none";
+        document.getElementById('loader-inner').style.display = "none";
     }
     const inputTensor = getCanvas();
     displayTensor(inputTensor, inputImageSize, inputImageSize, 'previewCanvas');
